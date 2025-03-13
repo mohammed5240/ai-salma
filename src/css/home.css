@@ -1,0 +1,160 @@
+.App{
+    .home{
+        height: 100dvh;
+        flex-direction: column;
+        justify-content: space-between;
+        .App1{
+            margin-top: 15px;
+            width: 92%;
+            justify-content: space-between;
+            margin-inline:4%;
+            
+            .side-bar{
+                li{
+                        color: var(--fontw);
+                        font-size: 20px;
+                        padding: 10px 20px;
+                        position: relative;
+                        transition: 0.7s;
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            background-color: var(--bgdark);
+                            width: 5px;
+                            height: 5px;
+                            border-radius: 100%;
+                            top:16px;
+                            left: 0;
+                        }
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            background-color: var(--colorhover);
+                            width: 0px;
+                            height: 2px;
+                            bottom: 3px;
+                            left: 0;
+                            right: 0;
+                            transition: 0.7s;
+                            
+                        }
+                        &:hover::before{
+                            width: 100%;
+                        }
+                        &:hover::after{
+                            background-color:var(--colorhover);
+                        }
+                        &:hover{
+                            color:var(--colorhover);
+                        }
+                }
+                .active{
+                    color: var(--colorhover);
+                    scale: 1.1;
+                    font-weight: bold;
+                    &::after{
+                        background-color: var(--colorhover);
+                        scale: 1.2;
+                    }
+                }
+                
+            }
+            .bt{
+                background-color: var(--colorhover);
+                color: white;
+                border-radius: 25px;
+                &:hover{
+                    border: 3px solid var(--colorhover);
+                    border-radius: 15px;
+                    color: var(--colorhover);
+                    background-color: transparent;
+                }
+            }
+        }
+        .App2{
+            color: var(--fontw);
+            .home-content{
+                width: 60%;
+                flex-direction: column;
+                text-align: center;
+                margin-inline: 20%;
+                h2{
+                    color: var(--colorhover);
+                }
+                h1{
+                    margin-block-end: 20px;
+                    font-size: 50px;
+                }
+                p{
+                    letter-spacing: 1.1;
+                    font-size: 22px;
+                    line-height: 1.6;
+                }
+                .btns{
+                    gap: 30px;
+                    margin-top: 60px;
+                    font-size: 25px;
+                    .bt1{
+                        background-color: var(--colorhover);
+                        color: white;
+                        border-radius: 25px;
+                        &:hover{
+                            border: 3px solid var(--colorhover);
+                            border-radius: 15px;
+                            color: var(--colorhover);
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+        .App3{
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 40px;
+            width: 100%;
+            overflow: hidden;
+            background-color: #212228;
+            padding-block: 25PX; 
+            ul{
+                gap: 30px;
+                animation: anim 50s infinite linear;
+                li{
+                    padding: 10px 10px;
+                    width: 300px;
+                    height: 80px;
+                    font-size: 17px;
+                    background-color: var(--bgdark);
+                    color: white;
+                    cursor: pointer;
+                    transition: 0.4s;
+                    &:hover{
+                        background-color: white;
+                        color: var(--colorhover);
+                    }
+                    &:hover li ul{
+                        animation-play-state: paused;
+                }
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                
+                }
+            }
+            .ul2{
+                animation: anim2 50s infinite linear;
+                flex-direction: row-reverse;
+                
+            }
+        }
+    }
+}
+    
+@keyframes anim {
+    0% {transform: translateX(1200px);}
+    100% {transform: translateX(-1220px);}
+}
+@keyframes anim2 {
+    0% {transform: translateX(-1286px);}
+    100% {transform: translateX(1125px);}
+}

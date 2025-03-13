@@ -1,0 +1,51 @@
+.App{
+    overflow: hidden;
+    .Services{
+        background-color: var(--bgbody2);
+        height: 110dvh;
+        overflow-x: hidden;
+        .services-slide{
+            border-radius: 20px;
+            overflow: hidden;
+            width: 100%;
+            height: 800px;
+            margin-left: 10%;
+            
+            .imgss{
+                width: 70%;
+                background-image: url("./../img/Dentisto/cephalo.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                height: 100%;
+            }
+            .list-services{
+                width: calc(30%-30px);
+                .serv{  
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 168px;
+                    color: var(--fontw);
+                    &:hover{
+                        background-color: rgb(15, 15, 70);
+                        cursor: pointer;
+                    }
+
+                    h3{
+                        font-size: 22px;
+                        color: var(--colorhover);
+                        margin-left: 10px;
+                        margin-bottom: 20px;
+                    }
+                    p{
+                        font-size: 17px;
+                        line-height: 1.7;
+                        margin-left: 15px;
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

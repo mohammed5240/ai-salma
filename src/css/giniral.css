@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+@import "tailwindcss";
+:root{
+    --bgbody:#212228;
+    --bgbody2:#26272e;
+    --bgdark:#333333 ;
+    --bgdark2:#424242 ;
+    --colorhover:#0068FA;
+    --fontw:#fff;
+    --fontb:#000;
+}
+*{
+    font-family: "Roboto", serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: var(--bgbody);
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.border{
+    border: 6px solid var(--colorhover);
+}
+ul,li{
+    text-decoration: none;
+    list-style-type: none;
+}
+a, button ,.x{
+    list-style-type:none;
+    all: unset;
+    display: inline-block;
+}
+a:active, button:active{
+    transform: scale(0.9);
+}
+a:hover, button:hover{
+    cursor: pointer;
+}
+.contenir{
+    width: 80%;
+    margin-inline:10%;
+}
+.btn{
+    
+        border: 3px solid var(--colorhover);
+        border-radius: 15px;
+        color: var(--colorhover);
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: 0.4s;
+        &:hover{
+            background-color: var(--colorhover);
+            color: white;
+            border-radius: 25px;
+        }
+    
+}
+.slide{
+    width: 100%;
+    text-align: center;
+    margin-block: 30px;
+    animation: s 2s linear infinite;
+    h2{
+        color: var(--fontw);
+        font-size: 50px;
+        transition: 0.5s;
+        &:hover{
+            
+            color: var(--colorhover);
+            scale: 1.1;
+            
+        }
+    }
+}
+
+@keyframes s{
+    0%{
+        opacity: 1;
+        
+    }
+    50%{
+        opacity: 0.4;
+    }
+    100%{
+        opacity: 1;
+    }
+}
