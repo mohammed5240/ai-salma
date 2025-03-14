@@ -14,6 +14,7 @@ import { ImHeadphones } from "react-icons/im";
 import { GrSettingsOption } from "react-icons/gr";
 import { CiDollar } from "react-icons/ci";
 import { BsBricks } from "react-icons/bs";
+import { MdOutlineLightMode } from "react-icons/md";
 
 
 
@@ -21,7 +22,7 @@ import { BsBricks } from "react-icons/bs";
 function App() {
   
   return (
-    <div className="App">
+    <div className="App" id=''>
       <div className='home flex'>
         <Navbar/>
       <div className="App2">
